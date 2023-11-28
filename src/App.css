@@ -12,6 +12,27 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.wrapper {
+  height: 500px;
+  position: fixed;
+  width: 100vw;
+}
+.headerbg-dark {
+  background-image: url('./assets/bg-desktop-dark.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  
+}
+.headerbg-light {
+  background-image: url('./assets/bg-desktop-light.jpg');
+  background-position: top center ;
+  background-repeat: no-repeat;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
 
 .App-header {
   background-color: #282c34;
