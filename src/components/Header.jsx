@@ -10,9 +10,11 @@ function Header() {
  
   return (
     <div className={`wrapper ${isDarkMode ? `headerbg-dark` :  `headerbg-light`} `}>
-      <h1>Todo</h1>
-
-      <button onClick={darkToggle}><img src={icon} /></button>
+      <div className='header-wrapper'>
+        <h1>Todo </h1>
+        <button onClick={darkToggle}><img src={icon} alt='alt text' /></button>
+      </div>
+      
     </div>
   )
 }

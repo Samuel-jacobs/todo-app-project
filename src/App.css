@@ -13,28 +13,38 @@
   }
 }
 .wrapper {
-  height: 500px;
-  position: fixed;
+  height: 50vh;
   width: 100vw;
+  
+  
 }
 .headerbg-dark {
   background-image: url('./assets/bg-desktop-dark.jpg');
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
   
 }
 .headerbg-light {
   background-image: url('./assets/bg-desktop-light.jpg');
   background-position: top center ;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -47,7 +57,7 @@ button {
 
 .App-link {
   color: #61dafb;
-}
+} */
 
 @keyframes App-logo-spin {
   from {
