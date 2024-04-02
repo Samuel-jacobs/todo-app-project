@@ -2,7 +2,9 @@ import React from 'react'
 
 function Form() {
   return (
-    <div>Form</div>
+    <form>
+      <input type="text" class="todo-input" required />
+    </form>
   )
 }
 
