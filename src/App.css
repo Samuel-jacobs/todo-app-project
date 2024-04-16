@@ -25,26 +25,17 @@
 }
 .background-dark {
   background-color: var(--Very-Dark-Blue);
+  background-image: url('./assets/bg-desktop-dark.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
 }
 .background-light {
   background-color: var(--Very-Light-Gray);
-}
-.wrapper {
-  height: 50vh;
-}
-.headerbg-dark {
-  background-image: url('./assets/bg-desktop-dark.jpg');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
-.headerbg-light {
   background-image: url('./assets/bg-desktop-light.jpg');
-  background-position: top center ;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 50%;
 }
+
 
 .header-wrapper {
   padding-top: 50px;
@@ -53,6 +44,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  color: var(--Very-Light-Gray);
 }
 
 button {
