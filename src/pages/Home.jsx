@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../components/Form';
+import TodoInput from '../components/TodoInput';
 import Header from '../components/Header';
 import TodoList from '../components/TodoList';
 import iconmoon from '../assets/iconmoon.svg';
@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className={`background ${isDarkMode ? `background-dark` :  `background-light`} `}>
         <Header toggle ={darkToggle} isDarkMode = {isDarkMode} icon = {icon}/>
-        <Form />
+        <TodoInput toggle = {darkToggle} isDarkMode = {isDarkMode} />
         <TodoList />
     </div>
   )
