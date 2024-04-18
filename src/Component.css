@@ -28,6 +28,9 @@
     padding-top: 20px;
     width: 40vw;
 }
+.dark-input {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+}
 .todo-input {
     width: 100%;
     padding: 15px 10px;
@@ -52,13 +55,18 @@
     border-radius: 5px;
     background-color: hsl(0, 0%, 98%);
 }
+.dark-list {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    color: hsl(0, 0%, 98%);
+}
 
 .todo-list li {
     
     
     padding: 20px;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.5px solid var(--Light-Grayish-Blue);
 }
+
 /* .todo-list li:first-child {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

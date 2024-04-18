@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Component.css'
 
-function TodoList() {
+function TodoList({isDarkMode}) {
   return (
     <div className='todo-list-wrapper'>
-      <ul className='todo-list'>
+      <ul className={`todo-list ${isDarkMode ? `dark-list` : `light-list` }`}>
         <li>buy groceries</li>
         <li>smoke some weed</li>
         <li>have a threesome</li>
