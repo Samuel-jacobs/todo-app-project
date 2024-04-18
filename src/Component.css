@@ -1,0 +1,69 @@
+:root {
+    /* primary colors */
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  
+    /* light theme */
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+  
+    /* Dark theme */
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  }
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 40vw;
+}
+.todo-input {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.todo-list-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40vw;
+    
+}
+.todo-list {
+    background-color: hsl(0, 0%, 98%);
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.todo-list li {
+    
+    
+    padding: 20px;
+    border-bottom: 1px solid grey;
+}
+/* .todo-list li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.todo-list li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */

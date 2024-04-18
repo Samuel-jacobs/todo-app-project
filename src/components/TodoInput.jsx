@@ -1,11 +1,11 @@
 import React from 'react';
-import '../Form.css';
+import '../Component.css';
 import Form from 'react-bootstrap/Form'
 
-function TodoInput() {
+function TodoInput({isDarkMode}) {
   return (
     <Form className="form-wrapper">
-      <Form.Control type="text" className="todo-input" required />
+      <Form.Control type="text" className={`todo-input ${isDarkMode ? `dark-input` : `light-input` }`} required />
     </Form>
   )
 }

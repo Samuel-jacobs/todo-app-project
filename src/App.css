@@ -44,7 +44,7 @@ body {
 
 .header-wrapper {
   padding-top: 50px;
-  width: 40%;
+  width: 40vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
