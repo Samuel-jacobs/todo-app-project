@@ -1,13 +1,17 @@
 import React from 'react';
-import '../Component.css'
+import '../Component.css';
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 
 function TodoList({isDarkMode}) {
   return (
+    <>
     <div className={`todo-list-wrapper ${isDarkMode ? `dark-list` : `light-list` }`}>
       <ul className='todo-list'>
         <li>buy groceries</li>
-        <li>smoke some weed</li>
-        <li>have a threesome</li>
+        <li>work on my website</li>
+        <li>read a book</li>
         <li>watch a football match</li>
       </ul>
       <div className='todo-settings'>
@@ -17,10 +21,14 @@ function TodoList({isDarkMode}) {
           <p>Active</p>
           <p>Completed</p>
         </div>
-        <p>Clear completed</p>
+        <p>clear completed</p>
       </div>
+      
     </div>
+    
+  </>
   )
+
 }
 
 export default TodoList

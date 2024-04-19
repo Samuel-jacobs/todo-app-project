@@ -52,12 +52,9 @@
     border-radius: 5px;
 }
 .todo-list {
-    
     list-style-type: none;
     width: 100%;
     padding-left: 0;
-    
-    
 }
 .dark-list {
     background-color: var(--Very-Dark-Desaturated-Blue);
@@ -77,6 +74,7 @@
 .todo-category {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* .todo-list li:first-child {
