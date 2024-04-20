@@ -7,6 +7,8 @@ function Todo() {
         <li>work on my website</li>
         <li>read a book</li>
         <li>watch a football match</li> 
+        <li>watch a football match</li> 
+        <li>watch a football match</li> 
     </div>
   )
 }
