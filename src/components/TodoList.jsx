@@ -14,14 +14,18 @@ function TodoList({isDarkMode}) {
         <li>read a book</li>
         <li>watch a football match</li>
       </ul>
-      <div className='todo-settings row'>
-        <p className='col-4'>5 minutes</p>
-        <div className='todo-category col-4'>
+      <div className='todo-settings'>
+        <div>
+          <p >5 minutes</p>
+        </div>
+        <div className='todo-category'>
           <p>All</p>
           <p>Active</p>
           <p>Completed</p>
         </div>
-        <p className='col-4'>clear completed</p>
+        <div>
+          <p>clear completed</p>
+        </div>
       </div>
       
     </div>
