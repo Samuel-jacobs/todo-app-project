@@ -67,10 +67,14 @@
 }
 
 .todo-settings {
+    padding-inline: 10px;
+    width: 95%;
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
+
 }
 .todo-category {
+    width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
