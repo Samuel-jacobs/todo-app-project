@@ -13,6 +13,7 @@ function TodoList({isDarkMode}) {
         <li>work on my website</li>
         <li>read a book</li>
         <li>watch a football match</li>
+        <li>Complete an article</li>
       </ul>
       <div className='todo-settings'>
         <div>
