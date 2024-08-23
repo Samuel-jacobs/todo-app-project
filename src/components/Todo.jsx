@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-function Todo() {
+import { FaGenderless } from "react-icons/fa6";
+import { FaCircleCheck } from "react-icons/fa6";
+
+
+function Todo({text, isCompleted, id}) {
   return (
-    <div>
-        <li className='todo-item'>buy groceries</li>
-        <li>work on my website</li>
-        <li>read a book</li>
-        <li>watch a football match</li> 
-        <li>watch a football match</li> 
-        <li>watch a football match</li> 
+    <div className='todo-single'>
+      <FaGenderless className='icon'/>
+      <li className='todo-item'>{text}</li> 
     </div>
   )
 }
 
-export default Todo
+export default Todo;

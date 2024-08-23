@@ -1,18 +1,28 @@
 import React from 'react';
 import '../Component.css';
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
+//import { useState } from 'react';
 
-function TodoInput({isDarkMode}) {
-  const [input, setInput] = useState("")
+function TodoInput({isDarkMode, setInput, input, setTodos, todos}) {
+  const inputHander = (e) => {
+    setInput(e.target.value)
+  }
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setTodos([
+      ...todos, 
+      {text: input, isCompleted: false, id: Math.random() * 1000}
+    ]);
+    setInput(""); 
+  }
+ 
   return (
-    <Form className="form-wrapper">
+    <Form onSubmit={submitHandler} className="form-wrapper">
       <Form.Control type="text" className={`todo-input ${isDarkMode ? `dark-input` : `light-input` }`} required  
       value={input}
-      onChange={(e) => setInput(e.target.value)}/>
- 
+      onChange={inputHander}/>
     </Form>
-   
+    
   )
 }
 

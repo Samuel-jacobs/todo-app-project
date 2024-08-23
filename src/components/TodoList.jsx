@@ -1,19 +1,19 @@
 import React from 'react';
 import '../Component.css';
+import Todo from './Todo';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 
-function TodoList({isDarkMode}) {
+function TodoList({isDarkMode, todos}) {
   return (
     <>
     <div className={`todo-list-wrapper ${isDarkMode ? `dark-list` : `light-list` }`}>
       <ul className='todo-list'>
-        <li>buy groceries</li>
-        <li>work on my website</li>
-        <li>read a book</li>
-        <li>watch a football match</li>
-        <li>Complete an article</li>
+        {todos.map((todo) => (
+          <Todo text={todo.text} key={todo.id}/>
+        ))}
+        
       </ul>
       <div className='todo-settings'>
         <div>
