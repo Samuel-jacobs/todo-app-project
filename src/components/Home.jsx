@@ -16,7 +16,7 @@ function Home() {
     <div className={`background ${isDarkMode ? `background-dark` :  `background-light`} `}>
         <Header toggle ={darkToggle} isDarkMode = {isDarkMode} icon = {icon}/>
         <TodoInput todos={todos} setTodos={setTodos} input={input} setInput={setInput} toggle = {darkToggle} isDarkMode = {isDarkMode} />
-        <TodoList todos={todos}input={input} setInput={setInput} isDarkMode = {isDarkMode}/>
+        <TodoList todos={todos} setTodos={setTodos} input={input} setInput={setInput} isDarkMode = {isDarkMode}/>
     </div>
   )
 }

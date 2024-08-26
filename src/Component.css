@@ -98,7 +98,7 @@
     margin-left: 20px;
 }
 .todo-single .icon {
-    font-size: 30px;
+    font-size: 20px;
 }
 @media screen and (max-width: 768px) {
     .form-wrapper {

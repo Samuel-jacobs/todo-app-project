@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 //import { useState } from 'react';
 
 function TodoInput({isDarkMode, setInput, input, setTodos, todos}) {
+
   const inputHander = (e) => {
     setInput(e.target.value)
   }
@@ -15,6 +16,7 @@ function TodoInput({isDarkMode, setInput, input, setTodos, todos}) {
     ]);
     setInput(""); 
   }
+  
  
   return (
     <Form onSubmit={submitHandler} className="form-wrapper">
