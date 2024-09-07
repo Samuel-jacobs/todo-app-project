@@ -8,14 +8,14 @@ import Todo from './Todo';
 function TodoList({isDarkMode, setTodos, todos}) {
   
 
-  const toggleComplete = (id) => {
-    setTodos(prevTodos =>
-      prevTodos.map(todo =>
-        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
-      )
-    );
-    console.log("Todos after update:", todos);
-  };
+  // const toggleComplete = (id) => {
+  //   setTodos(prevTodos =>
+  //     prevTodos.map(todo =>
+  //       todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+  //     )
+  //   );
+  //   console.log("Todos after update:", todos);
+  // };
   
   return (
     <>
@@ -23,7 +23,7 @@ function TodoList({isDarkMode, setTodos, todos}) {
       <ul className='todo-list'>
         {todos.map((todo) => (
           <Todo 
-          isCompleted={todo.isCompleted} toggleComplete={toggleComplete} text={todo.text} key={todo.id}/>
+          isCompleted={todo.isCompleted} text={todo.text} key={todo.id}/>
           
         ))}
         
