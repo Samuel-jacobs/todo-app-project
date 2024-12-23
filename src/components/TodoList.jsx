@@ -1,29 +1,48 @@
 import React, { useState } from 'react';
 import '../Component.css';
 import Todo from './Todo';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
+
 
 function TodoList({isDarkMode, setTodos, todos}) {
-  
 
-  // const toggleComplete = (id) => {
-  //   setTodos(prevTodos =>
-  //     prevTodos.map(todo =>
-  //       todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
-  //     )
-  //   );
-  //   console.log("Todos after update:", todos);
-  // };
-  
+  const [filter, setFilter] = useState("all");
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === "active") return !todo.isCompleted;
+    if (filter === "completed") return todo.isCompleted;
+    return true; // "all"
+  });  
+
+  const deleteTodo = (id) => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+  };
+  // toggle the complete state of the todo item based on the id
+  const toggleCompletion = (id) => {
+   //this updates the todo item to be completed or not
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
+      )
+    );
+    console.log("check")
+   }
+   const clearComplete = () => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => !todo.isCompleted));
+    console.log("Completed todos deleted");
+   }
   return (
     <>
     <div className={`todo-list-wrapper ${isDarkMode ? `dark-list` : `light-list` }`}>
       <ul className='todo-list'>
-        {todos.map((todo) => (
-          <Todo 
-          isCompleted={todo.isCompleted} text={todo.text} key={todo.id}/>
+        {filteredTodos.map((todo) => (
+          <Todo
+
+            isCompleted={todo.isCompleted} 
+            toggleCompletion={toggleCompletion}
+            text={todo.text} 
+            key={todo.id}
+            id={todo.id}
+            deleteTodo={deleteTodo}
+            />
           
         ))}
         
@@ -33,12 +52,12 @@ function TodoList({isDarkMode, setTodos, todos}) {
           <p>5 minutes</p>
         </div>
         <div className='todo-category'>
-          <p>All</p>
-          <p>Active</p>
-          <p>Completed</p>
+          <button  onClick={() => setFilter("all")} className={filter === "all" ? "active-tab" : ""}>All</button>
+          <button  onClick={() => setFilter("active")} className={filter === "active" ? "active-tab" : ""}>Active</button>
+          <button  onClick={() => setFilter("completed")} className={filter === "completed" ? "active-tab" : ""}>Completed</button>
         </div>
         <div>
-          <p>clear completed</p>
+          <button onClick={clearComplete}>clear completed</button>
         </div>
       </div>
       

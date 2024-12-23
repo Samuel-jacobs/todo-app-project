@@ -59,10 +59,12 @@
 }
 .dark-list {
     background-color: var(--Very-Dark-Desaturated-Blue);
-    color: hsl(0, 0%, 98%);
+    color: white;
 }
 
-
+.todo-category button.active-tab {
+    color: blue;
+}
 
 .todo-settings {
     padding-inline: 10px;
@@ -99,6 +101,11 @@
 }
 .todo-single .icon {
     font-size: 20px;
+}
+
+.completed-list {
+    text-decoration: line-through;
+    color: grey;
 }
 @media screen and (max-width: 768px) {
     .form-wrapper {

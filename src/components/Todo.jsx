@@ -2,24 +2,19 @@ import React, { useState } from 'react';
 import useToggle from '../hooks/useToggle';
 import { FaRegCircle } from "react-icons/fa6";
 import { FaCircleCheck } from "react-icons/fa6";
+import {FaTrash} from "react-icons/fa6";
 
 
-function Todo({text, isCompleted, id, }) {
-  const [isComplete, setIsComplete] = useState(isCompleted);
-  console.log(isCompleted);
-  const completeHandler = () => {
-    setIsComplete(!isComplete);
+function Todo({text, isCompleted, toggleCompletion, id, deleteTodo}) {
+
   
-    console.log(!isCompleted);
-    console.log(!isComplete);
-    // console.log("Clicked! Current isCompleted:", isCompleted);
-    // toggleComplete(id);
-   } 
-   
   return (
-    <div className='todo-single'>
-      <button onClick={completeHandler} className='icon'>{isComplete ? <FaCircleCheck /> : <FaRegCircle />}</button>
+    <div className={`todo-single ${isCompleted ? `completed-list` : `not-complete`}`}>
+      <button onClick={() => toggleCompletion(id)} className='icon'>
+        {isCompleted ? <FaCircleCheck /> : <FaRegCircle />}
+      </button>
       <li className='todo-item'>{text}</li> 
+      <button onClick={() => deleteTodo(id)}  className='icon'><FaTrash> </FaTrash></button>
     </div>
   )
 }
