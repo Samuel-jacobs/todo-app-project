@@ -10,11 +10,14 @@ function Todo({text, isCompleted, toggleCompletion, id, deleteTodo}) {
   
   return (
     <div className={`todo-single ${isCompleted ? `completed-list` : `not-complete`}`}>
-      <button onClick={() => toggleCompletion(id)} className='icon'>
-        {isCompleted ? <FaCircleCheck /> : <FaRegCircle />}
-      </button>
-      <li className='todo-item'>{text}</li> 
-      <button onClick={() => deleteTodo(id)}  className='icon'><FaTrash> </FaTrash></button>
+      <div className='todo-main'>
+        <button onClick={() => toggleCompletion(id)} className='icon'>
+          {isCompleted ? <FaCircleCheck /> : <FaRegCircle />}
+        </button>
+        <li className='todo-item'>{text}</li> 
+      </div>
+      
+      <button onClick={() => deleteTodo(id)}  className='trash'><FaTrash> </FaTrash></button>
     </div>
   )
 }

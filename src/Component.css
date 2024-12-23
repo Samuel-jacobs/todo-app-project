@@ -79,7 +79,9 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.dark-category button {
+    color: white;
+}
 /* .todo-list li:first-child {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -91,10 +93,15 @@
 
 .todo-single {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid var(--Dark-Grayish-Blue);
-    
     padding: 20px;
+}
+.todo-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .todo-single li {
     margin-left: 20px;
@@ -106,6 +113,9 @@
 .completed-list {
     text-decoration: line-through;
     color: grey;
+}
+.trash {
+    
 }
 @media screen and (max-width: 768px) {
     .form-wrapper {

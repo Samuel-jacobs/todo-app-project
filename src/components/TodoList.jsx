@@ -29,6 +29,8 @@ function TodoList({isDarkMode, setTodos, todos}) {
     setTodos((prevTodos) => prevTodos.filter((todo) => !todo.isCompleted));
     console.log("Completed todos deleted");
    }
+
+   const incompleteCount = todos.filter((todo) => !todo.isCompleted).length;
   return (
     <>
     <div className={`todo-list-wrapper ${isDarkMode ? `dark-list` : `light-list` }`}>
@@ -49,9 +51,9 @@ function TodoList({isDarkMode, setTodos, todos}) {
       </ul>
       <div className='todo-settings'>
         <div>
-          <p>5 minutes</p>
+          <p>{incompleteCount} items left</p>
         </div>
-        <div className='todo-category'>
+        <div className={`todo-category ${isDarkMode ? `dark-category` : `light-category` }`}>
           <button  onClick={() => setFilter("all")} className={filter === "all" ? "active-tab" : ""}>All</button>
           <button  onClick={() => setFilter("active")} className={filter === "active" ? "active-tab" : ""}>Active</button>
           <button  onClick={() => setFilter("completed")} className={filter === "completed" ? "active-tab" : ""}>Completed</button>
