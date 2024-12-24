@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useRef, useState } from 'react';
 import '../Component.css';
 import Todo from './Todo';
 
@@ -25,26 +25,50 @@ function TodoList({isDarkMode, setTodos, todos}) {
     );
     console.log("check")
    }
+
+   //function to clear completed todos
    const clearComplete = () => {
     setTodos((prevTodos) => prevTodos.filter((todo) => !todo.isCompleted));
     console.log("Completed todos deleted");
    }
 
+   // get the number of items that are still uncomplete
    const incompleteCount = todos.filter((todo) => !todo.isCompleted).length;
+
+   const dragTodo = useRef(null);
+    const dragOverTodo = useRef(null);
+
+  const handleSort = () => {
+    const todosClone = [...todos];
+    const draggedIndex = todos.findIndex((todo) => todo.id === dragTodo.current);
+    const draggedOverIndex = todos.findIndex((todo) => todo.id === dragOverTodo.current);
+
+    // Swap the items in the array
+    const [draggedItem] = todosClone.splice(draggedIndex, 1);
+    todosClone.splice(draggedOverIndex, 0, draggedItem);
+
+    setTodos(todosClone);
+    dragTodo.current = null;
+    dragOverTodo.current = null;
+  };
+
   return (
     <>
     <div className={`todo-list-wrapper ${isDarkMode ? `dark-list` : `light-list` }`}>
       <ul className='todo-list'>
         {filteredTodos.map((todo) => (
-          <Todo
-
+          <Todo 
+            isDarkMode={isDarkMode}
             isCompleted={todo.isCompleted} 
             toggleCompletion={toggleCompletion}
             text={todo.text} 
             key={todo.id}
             id={todo.id}
             deleteTodo={deleteTodo}
-            />
+            handleSort={handleSort}
+            dragOverTodo={dragOverTodo}
+            dragTodo={dragTodo}
+          />
           
         ))}
         
@@ -64,7 +88,7 @@ function TodoList({isDarkMode, setTodos, todos}) {
       </div>
       
     </div>
-    
+    <p className='text-center'>drag and drop to rearrange</p>
   </>
   )
 

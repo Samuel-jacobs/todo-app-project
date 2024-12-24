@@ -3,13 +3,31 @@ import useToggle from '../hooks/useToggle';
 import { FaRegCircle } from "react-icons/fa6";
 import { FaCircleCheck } from "react-icons/fa6";
 import {FaTrash} from "react-icons/fa6";
+import { useRef } from 'react';
 
 
-function Todo({text, isCompleted, toggleCompletion, id, deleteTodo}) {
+
+function Todo({
+  text, 
+  isCompleted, 
+  toggleCompletion, 
+  id, 
+  deleteTodo,
+  dragOverTodo,
+  dragTodo,
+  handleSort,
+  isDarkMode
+}) {
 
   
+  
   return (
-    <div className={`todo-single ${isCompleted ? `completed-list` : `not-complete`}`}>
+    <div className={`todo-single ${isCompleted ? `completed-list` : `not-complete`}`} draggable 
+    onDragStart={() => (dragTodo.current = id)}
+    onDragEnter={() => (dragOverTodo.current = id)}
+    onDragEnd={handleSort}
+    >
+    
       <div className='todo-main'>
         <button onClick={() => toggleCompletion(id)} className='icon'>
           {isCompleted ? <FaCircleCheck /> : <FaRegCircle />}
@@ -17,7 +35,7 @@ function Todo({text, isCompleted, toggleCompletion, id, deleteTodo}) {
         <li className='todo-item'>{text}</li> 
       </div>
       
-      <button onClick={() => deleteTodo(id)}  className='trash'><FaTrash> </FaTrash></button>
+      <button onClick={() => deleteTodo(id)}  className={`trash ${isDarkMode ? `dark-trash` : `light-trash`}`}><FaTrash> </FaTrash></button>
     </div>
   )
 }
