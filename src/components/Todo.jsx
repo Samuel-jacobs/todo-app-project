@@ -22,21 +22,24 @@ function Todo({
   
   
   return (
-    <div className={`todo-single ${isCompleted ? `completed-list` : `not-complete`}`} draggable 
-    onDragStart={() => (dragTodo.current = id)}
-    onDragEnter={() => (dragOverTodo.current = id)}
-    onDragEnd={handleSort}
-    >
-    
-      <div className='todo-main'>
-        <button onClick={() => toggleCompletion(id)} className='icon'>
-          {isCompleted ? <FaCircleCheck /> : <FaRegCircle />}
-        </button>
-        <li className='todo-item'>{text}</li> 
+    <div className={`todo-wrapper ${isDarkMode ? `todo-wrapper-dark` : `todo-wrapper-light`}`}>
+      <div className={`todo-single ${isCompleted ? `completed-list` : `not-complete`}`} draggable 
+          onDragStart={() => (dragTodo.current = id)}
+          onDragEnter={() => (dragOverTodo.current = id)}
+          onDragEnd={handleSort}
+          >
+          
+            <div className='todo-main'>
+              <button onClick={() => toggleCompletion(id)} className='icon'>
+                {isCompleted ? <FaCircleCheck /> : <FaRegCircle />}
+              </button>
+              <li className='todo-item'>{text}</li> 
+            </div>
+            
+            <button onClick={() => deleteTodo(id)}  className={`trash ${isDarkMode ? `dark-trash` : `light-trash`}`}><FaTrash> </FaTrash></button>
       </div>
-      
-      <button onClick={() => deleteTodo(id)}  className={`trash ${isDarkMode ? `dark-trash` : `light-trash`}`}><FaTrash> </FaTrash></button>
     </div>
+    
   )
 }
 

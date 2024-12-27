@@ -97,6 +97,7 @@
     align-items: center;
     border-bottom: 0.5px solid var(--Dark-Grayish-Blue);
     padding: 20px;
+   
 }
 .todo-main {
     display: flex;
@@ -107,9 +108,11 @@
     margin-left: 20px;
 }
 .todo-single .icon{
-    font-size: 20px;
-    background-image: linear-gradient( hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     
+    background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%); /* Define the gradient */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent;
+
 }
 
 .completed-list {
@@ -120,6 +123,14 @@
     
 }
 .dark-trash {
+    color: white;
+}
+
+.drag-text {
+    text-align: center;
+    color: var(--Very-Dark-Blue); 
+}
+.dark-text {
     color: white;
 }
 @media screen and (max-width: 768px) {

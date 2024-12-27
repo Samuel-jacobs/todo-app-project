@@ -20,7 +20,7 @@ function TodoInput({isDarkMode, setInput, input, setTodos, todos}) {
  
   return (
     <Form onSubmit={submitHandler} className="form-wrapper">
-      <Form.Control type="text" className={`todo-input ${isDarkMode ? `dark-input` : `light-input` }`} required  
+      <Form.Control type="text" placeholder='Create a new todo...' className={`todo-input ${isDarkMode ? `dark-input` : `light-input` }`} required  
       value={input}
       onChange={inputHander}/>
     </Form>

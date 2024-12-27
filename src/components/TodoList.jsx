@@ -75,7 +75,7 @@ function TodoList({isDarkMode, setTodos, todos}) {
       </ul>
       <div className='todo-settings'>
         <div>
-          <p>{incompleteCount} items left</p>
+          <p>{incompleteCount} Items left</p>
         </div>
         <div className={`todo-category ${isDarkMode ? `dark-category` : `light-category` }`}>
           <button  onClick={() => setFilter("all")} className={filter === "all" ? "active-tab" : ""}>All</button>
@@ -88,7 +88,7 @@ function TodoList({isDarkMode, setTodos, todos}) {
       </div>
       
     </div>
-    <p className='text-center'>drag and drop to rearrange</p>
+    <p className={`drag-text ${isDarkMode ? `dark-text` : `light-text` }`}>Drag and drop to rearrange</p>
   </>
   )
 
