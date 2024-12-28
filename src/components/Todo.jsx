@@ -3,7 +3,7 @@ import useToggle from '../hooks/useToggle';
 import { FaRegCircle } from "react-icons/fa6";
 import { FaCircleCheck } from "react-icons/fa6";
 import {FaTrash} from "react-icons/fa6";
-import { useRef } from 'react';
+
 
 
 
@@ -23,6 +23,7 @@ function Todo({
   
   return (
     <div className={`todo-wrapper ${isDarkMode ? `todo-wrapper-dark` : `todo-wrapper-light`}`}>
+
       <div className={`todo-single ${isCompleted ? `completed-list` : `not-complete`}`} draggable 
           onDragStart={() => (dragTodo.current = id)}
           onDragEnter={() => (dragOverTodo.current = id)}
@@ -31,7 +32,7 @@ function Todo({
           
             <div className='todo-main'>
               <button onClick={() => toggleCompletion(id)} className='icon'>
-                {isCompleted ? <FaCircleCheck /> : <FaRegCircle />}
+                {isCompleted ? <FaCircleCheck/> : <FaRegCircle />}
               </button>
               <li className='todo-item'>{text}</li> 
             </div>

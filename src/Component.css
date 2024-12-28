@@ -99,6 +99,9 @@
     padding: 20px;
    
 }
+.todo-single:active {
+    opacity: 1;
+}
 .todo-main {
     display: flex;
     justify-content: center;
@@ -107,12 +110,10 @@
 .todo-single li {
     margin-left: 20px;
 }
-.todo-single .icon{
-    
-    background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%); /* Define the gradient */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    -webkit-text-fill-color: transparent;
 
+button.icon{
+    
+   color: hsl(280, 87%, 65%);
 }
 
 .completed-list {

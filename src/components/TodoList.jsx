@@ -52,6 +52,7 @@ function TodoList({isDarkMode, setTodos, todos}) {
     dragOverTodo.current = null;
   };
 
+  const textClass = isDarkMode ? "dark-text" : "light-text";
   return (
     <>
     <div className={`todo-list-wrapper ${isDarkMode ? `dark-list` : `light-list` }`}>
@@ -82,16 +83,16 @@ function TodoList({isDarkMode, setTodos, todos}) {
           <button  onClick={() => setFilter("active")} className={filter === "active" ? "active-tab" : ""}>Active</button>
           <button  onClick={() => setFilter("completed")} className={filter === "completed" ? "active-tab" : ""}>Completed</button>
         </div>
-        <div>
-          <button onClick={clearComplete}>clear completed</button>
-        </div>
+       
+          <button className={textClass} onClick={clearComplete}>Clear completed</button>
+      
       </div>
       
     </div>
-    <p className={`drag-text ${isDarkMode ? `dark-text` : `light-text` }`}>Drag and drop to rearrange</p>
+    <p className={`drag-text ${textClass}`}>Drag and drop to rearrange</p>
   </>
   )
 
 }
 
-export default TodoList
+export default TodoList;
