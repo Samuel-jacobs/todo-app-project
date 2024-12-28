@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4beb07a5.css",
-    "main.js": "/static/js/main.6942964c.js",
-    "static/js/787.aacd9351.chunk.js": "/static/js/787.aacd9351.chunk.js",
-    "static/media/bg-desktop-light.jpg": "/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
-    "static/media/bg-desktop-dark.jpg": "/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
-    "index.html": "/index.html",
-    "static/media/iconsun.svg": "/static/media/iconsun.910b1f9a23741afc341e95653a51f14f.svg",
-    "static/media/iconmoon.svg": "/static/media/iconmoon.6c03114b495d05f4380b3c544d9afe2a.svg",
-    "main.4beb07a5.css.map": "/static/css/main.4beb07a5.css.map",
-    "main.6942964c.js.map": "/static/js/main.6942964c.js.map",
-    "787.aacd9351.chunk.js.map": "/static/js/787.aacd9351.chunk.js.map"
+    "main.css": "/todo-app-project/static/css/main.eeaa8591.css",
+    "main.js": "/todo-app-project/static/js/main.c1869569.js",
+    "static/js/787.aacd9351.chunk.js": "/todo-app-project/static/js/787.aacd9351.chunk.js",
+    "static/media/bg-desktop-light.jpg": "/todo-app-project/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/todo-app-project/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "index.html": "/todo-app-project/index.html",
+    "static/media/iconsun.svg": "/todo-app-project/static/media/iconsun.910b1f9a23741afc341e95653a51f14f.svg",
+    "static/media/iconmoon.svg": "/todo-app-project/static/media/iconmoon.6c03114b495d05f4380b3c544d9afe2a.svg",
+    "main.eeaa8591.css.map": "/todo-app-project/static/css/main.eeaa8591.css.map",
+    "main.c1869569.js.map": "/todo-app-project/static/js/main.c1869569.js.map",
+    "787.aacd9351.chunk.js.map": "/todo-app-project/static/js/787.aacd9351.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4beb07a5.css",
-    "static/js/main.6942964c.js"
+    "static/css/main.eeaa8591.css",
+    "static/js/main.c1869569.js"
   ]
 }
