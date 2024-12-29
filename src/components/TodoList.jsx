@@ -88,7 +88,16 @@ function TodoList({isDarkMode, setTodos, todos}) {
       
       </div>
       
+      
     </div>
+    <div className={`category-mobile-wrapper ${isDarkMode ? `dark-category-mobile` : `light-category-mobile` }`}>
+      <div className={`todo-category-mobile ${isDarkMode ? `dark-category` : `light-category` }`}>
+        <button  onClick={() => setFilter("all")} className={filter === "all" ? "active-tab" : ""}>All</button>
+        <button  onClick={() => setFilter("active")} className={filter === "active" ? "active-tab" : ""}>Active</button>
+        <button  onClick={() => setFilter("completed")} className={filter === "completed" ? "active-tab" : ""}>Completed</button>
+      </div>
+    </div>
+    
     <p className={`drag-text ${textClass}`}>Drag and drop to rearrange</p>
   </>
   )
