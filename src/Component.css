@@ -65,6 +65,9 @@
 .todo-category button.active-tab {
     color: blue;
 }
+.todo-category-mobile button.active-tab {
+    color: blue;
+}
 
 .todo-settings {
     padding-inline: 10px;
