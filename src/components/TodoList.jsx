@@ -1,6 +1,7 @@
 import React, {useRef, useState } from 'react';
 import '../Component.css';
 import Todo from './Todo';
+import {Reorder} from "framer-motion"
 
 
 function TodoList({isDarkMode, setTodos, todos}) {
@@ -57,21 +58,25 @@ function TodoList({isDarkMode, setTodos, todos}) {
     <>
     <div className={`todo-list-wrapper ${isDarkMode ? `dark-list` : `light-list` }`}>
       <ul className='todo-list'>
+        <Reorder.Group values={filteredTodos} onReorder={setTodos}>
         {filteredTodos.map((todo) => (
-          <Todo 
-            isDarkMode={isDarkMode}
-            isCompleted={todo.isCompleted} 
-            toggleCompletion={toggleCompletion}
-            text={todo.text} 
-            key={todo.id}
-            id={todo.id}
-            deleteTodo={deleteTodo}
-            handleSort={handleSort}
-            dragOverTodo={dragOverTodo}
-            dragTodo={dragTodo}
-          />
-          
+          <Reorder.Item value={todo} key={todo}>
+            <Todo 
+              isDarkMode={isDarkMode}
+              isCompleted={todo.isCompleted} 
+              toggleCompletion={toggleCompletion}
+              text={todo.text} 
+              key={todo.id}
+              id={todo.id}
+              deleteTodo={deleteTodo}
+              handleSort={handleSort}
+              dragOverTodo={dragOverTodo}
+              dragTodo={dragTodo}
+            />  
+          </Reorder.Item>
         ))}
+        </Reorder.Group>
+       
         
       </ul>
       <div className='todo-settings'>
