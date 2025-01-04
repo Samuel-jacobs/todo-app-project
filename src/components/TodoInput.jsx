@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Component.css';
 import Form from 'react-bootstrap/Form';
+import { FaRegCircle } from "react-icons/fa6";
 //import { useState } from 'react';
 
 function TodoInput({isDarkMode, setInput, input, setTodos, todos}) {
@@ -23,6 +24,7 @@ function TodoInput({isDarkMode, setInput, input, setTodos, todos}) {
       <Form.Control type="text" placeholder='Create a new todo...' className={`todo-input ${isDarkMode ? `dark-input` : `light-input` }`} required  
       value={input}
       onChange={inputHander}/>
+      <FaRegCircle className='input-circle'/>
     </Form>
     
   )

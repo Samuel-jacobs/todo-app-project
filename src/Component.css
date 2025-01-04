@@ -27,6 +27,7 @@
     margin: 0 auto;
     padding-top: 20px;
     width: 40vw;
+    position: relative;
 }
 .dark-input {
     background-color: var(--Very-Dark-Desaturated-Blue);
@@ -34,9 +35,15 @@
 }
 .todo-input {
     width: 100%;
-    padding: 15px 10px;
+    padding: 15px 50px;
     border-radius: 5px;
     border: none;
+    
+}
+.input-circle {
+    position: absolute;
+   left: 20px;
+
 }
 
 .todo-list-wrapper {

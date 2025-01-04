@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import useToggle from '../hooks/useToggle';
 import { FaRegCircle } from "react-icons/fa6";
 import { FaCircleCheck } from "react-icons/fa6";
 import {FaTrash} from "react-icons/fa6";
-
-
-
 
 function Todo({
   text, 
@@ -18,8 +14,6 @@ function Todo({
   handleSort,
   isDarkMode
 }) {
-
-  
   
   return (
     <div className={`todo-wrapper ${isDarkMode ? `todo-wrapper-dark` : `todo-wrapper-light`}`}>
