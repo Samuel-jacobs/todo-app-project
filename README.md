@@ -79,8 +79,7 @@ The Todo input component is pretty straight forward. A form is created, then to 
 
 
 #### Todolist 
-In the todolist, we map around the todo array in an unorderded list and display the todo items. Here is also where we implement the filtering and the drag and drop. To implement the filtering, we 
-
+In the todolist, we map around the todo array in an unorderded list and display the todo items. Here is also where we implement the filtering and the drag and drop. To implement the filtering, create a status state which checks the state of the todo wether it is completed or not. and a filter todo state where we store the new filtered array. with the status variable we create a switch statement each case representing the status of the todo item namely active, completed, and all for all states. In each switch we update the filtered todo state with the an array with all the todo that matches the status. Then this is where map through the todo to display the todo items. 
 
 
 ```html
