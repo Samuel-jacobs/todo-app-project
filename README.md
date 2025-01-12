@@ -79,7 +79,10 @@ The Todo input component is pretty straight forward. A form is created, then to 
 
 
 #### Todolist 
-In the todolist, we map around the todo array in an unorderded list and display the todo items. Here is also where we implement the filtering and the drag and drop. To implement the filtering, create a status state which checks the state of the todo wether it is completed or not. and a filter todo state where we store the new filtered array. with the status variable we create a switch statement each case representing the status of the todo item namely active, completed, and all for all states. In each switch we update the filtered todo state with the an array with all the todo that matches the status. Then this is where map through the todo to display the todo items. 
+In the todolist. We need to display the todo items, mark a todo item as completed, delete a todo item, and filter the todo item. we also need to implement a drag and drop to rearrange the items how we want. we map around the todo array in an unorderded list and display the todo items. Here is also where we implement the filtering and the drag and drop. 
+
+
+ To implement the filtering, create a status state which checks the state of the todo wether it is completed or not. and a filter todo state where we store the new filtered array. with the status variable we create a switch statement each case representing the status of the todo item namely active, completed, and all for all states. In each switch we update the filtered todo state with the an array with all the todo that matches the status. Then this is where map through the todo to display the todo items. 
 
 To mark the todo item as completed, we have a function called todoComplete. it takes the previous todos and the id of the current todo. if the id matches then the spread operator is called to hold the current items and then set the isCompleted propert to the opposite state. this function is called on clicking the complete icon on the todo item. here the id is also passed. 
 
