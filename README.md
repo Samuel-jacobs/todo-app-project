@@ -75,11 +75,13 @@ In the home component, the Header, the todo input and the todo list are displaye
 The header component is mostly for a header text and the theme switcher button. since the toggle function and variable have already been passed here from the home page, we just add the function to the onclick attribute of the button. We also use a conditional formatting to set the class for the background of the header. 
 
 #### Todo Input
-The Todo input component is pretty straight forward. A form is created, then to handle the form we use the setInput state we passed from the home component. Here we create a function `inputChange` we set the input state to the target value. Also we create a function called `submitHandler` to handle the submission of the form. In the function, we spread the todo and then create an object with three properties, the `todo` is set to the text from the input, the `isComplete` which is used to track if the item is marked as complete or not. It is set to false by default , and the `id` is set to a random number. 
+The Todo input component is pretty straight forward. A form is created, then to handle the form we use the setInput state we passed from the home component. Here we create a function `inputChange` we set the input state to the target value. Also we create a function called `submitHandler` to handle the submission of the form. In the function, we get the todo array and update it by adding an object with 3 propoerties the todo text which is set to the input state, the id whcih is set to a random number, and the complete status `isComplete`  of the todo item which is set to false by default. `todo` is set to the text from the input, the  which is used to track if the item is marked as complete or not. It is set to false by default , and the `id` is set to a random number. 
 
 
 #### Todolist 
 In the todolist. We need to display the todo items, mark a todo item as completed, delete a todo item, and filter the todo item. we also need to implement a drag and drop to rearrange the items how we want. we map around the todo array in an unorderded list and display the todo items. Here is also where we implement the filtering and the drag and drop. 
+
+To display the todos, we use the todo state which we passed from the home component. First we map the todo and display each todo item with a todo component in an unordered list. 
 
 
  To implement the filtering, create a status state which checks the state of the todo wether it is completed or not. and a filter todo state where we store the new filtered array. with the status variable we create a switch statement each case representing the status of the todo item namely active, completed, and all for all states. In each switch we update the filtered todo state with the an array with all the todo that matches the status. Then this is where map through the todo to display the todo items. 
